@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="LargeGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="851.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="611.8668212890625" minWidth="10.0" prefWidth="576.0" />
+    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="275.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <RadioButton fx:id="sizeSmall" mnemonicParsing="false" onAction="#currentPizzaCost" selected="true" text="Small" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="size" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#currentPizzaCost" text="Medium" toggleGroup="$size" GridPane.rowIndex="2" />
+            <RadioButton mnemonicParsing="false" onAction="#currentPizzaCost" text="Large" toggleGroup="$size" GridPane.rowIndex="3" />
+            <Label text="Select a Size" />
+            <Label text="Select Cheese" GridPane.columnIndex="1" />
+            <Label text="Select Pepperoni" GridPane.columnIndex="2" />
+            <Label text="Select Mushrooms" GridPane.columnIndex="3" />
+            <RadioButton mnemonicParsing="false" onAction="#currentPizzaCost" selected="true" text="Single" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="cheese" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#currentPizzaCost" text="Double" toggleGroup="$cheese" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <RadioButton mnemonicParsing="false" onAction="#currentPizzaCost" text="Triple" toggleGroup="$cheese" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <RadioButton fx:id="NoPep" mnemonicParsing="false" onAction="#mushroomsNone" text="None" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pepperoni" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#mushroomsOn" selected="true" text="Single" toggleGroup="$pepperoni" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <RadioButton mnemonicParsing="false" onAction="#mushroomsOn" text="Double" toggleGroup="$pepperoni" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <RadioButton fx:id="mushNone" mnemonicParsing="false" onAction="#currentPizzaCost" selected="true" text="None" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="mushroom" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="mushSingle" mnemonicParsing="false" onAction="#currentPizzaCost" text="Single" toggleGroup="$mushroom" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <RadioButton fx:id="mushDouble" mnemonicParsing="false" onAction="#currentPizzaCost" text="Double" toggleGroup="$mushroom" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         </children>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </GridPane>
+      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="88.13600158691406" minHeight="20.0" prefHeight="50.96160125732422" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="107.12120056152344" minHeight="20.0" prefHeight="102.03839874267578" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="77.6864013671875" minHeight="10.0" prefHeight="25.878799438476562" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="CostDisplay" editable="false" maxWidth="-Infinity" prefHeight="27.0" prefWidth="178.0" />
+                  <Button fx:id="orderButton" mnemonicParsing="false" onAction="#addToLineItem" prefHeight="27.0" prefWidth="56.0" text="Add">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="numPizzaTextField" maxWidth="-Infinity" opacity="0.63" prefHeight="27.0" prefWidth="126.0" promptText="Number of Pizzas" />
+                  <Button fx:id="numPizzasButton" mnemonicParsing="false" onAction="#numPizzaEntered" text="Enter" />
+               </children>
+            </HBox>
+            <TextField fx:id="NumDisplay" editable="false" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <HBox fillHeight="false" prefWidth="304.0" GridPane.valignment="BOTTOM">
+               <children>
+                  <Label text="Pizza Cost:" textFill="#ff4c00">
+                     <HBox.margin>
+                        <Insets top="3.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="SinglePizzaCost" editable="false" prefHeight="27.0" prefWidth="62.0" text="\$8.5">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </GridPane>
+      <AnchorPane maxHeight="50.0" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" GridPane.columnSpan="2">
+         <children>
+            <Label fx:id="TopLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="17.0" text="Adam's Pizzeria" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Label text="Error Message" />
+            <TextArea id="errorMessageText" fx:id="errorMessageText" editable="false" opacity="0.63" prefHeight="200.0" prefWidth="269.0" stylesheets="@application.css" wrapText="true" />
+         </children>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+         <children>
+            <Label text="Order" />
+            <TextArea fx:id="orderText" editable="false" opacity="0.63" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </VBox>
+   </children>
+</GridPane>

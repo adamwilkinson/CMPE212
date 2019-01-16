@@ -1,0 +1,4 @@
+start (sec), finish (sec), current (amps)
+100,140,5.247,
+210,240,9.012, ***Current Exceeded***
+950,960,3.968,

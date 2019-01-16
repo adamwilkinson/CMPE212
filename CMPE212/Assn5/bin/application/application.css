@@ -1,0 +1,56 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.radio-button {
+	-fx-font-family: "Arial";
+	-fx-font-size: 15px;
+}
+
+.label {
+	-fx-font-family: "Arial";
+	-fx-font-size: 15px;
+}
+
+#errorMessageText {
+	-fx-font-family: "Arial";
+	-fx-text-fill: red
+}
+
+.rectangle {
+	-fx-fill-width: true 
+}
+
+#orderButton {
+	-fx-background-color: rgb(255,39,49);
+	-fx-font-family: "Arial";
+	-fx-font-size: 15px;
+}
+
+#TopLabel {
+	-fx-background-color: rgb(255,160,0);
+	-fx-border-color: rgb(255,109,1);
+	-fx-font-family: "Arial";
+	-fx-font-size: 15px;	
+}
+
+#NumDisplay , #CostDisplay, #SinglePizzaCost {
+	-fx-background-color: rgb(255,179,50);
+	-fx-font-family: "Arial";
+	-fx-font-size: 15px;
+	-fx-font: #ff4c00
+}
+
+GridPane {
+	-fx-background-color: rgb(255,179,50)
+}
+
+TextArea {
+	-fx-background-color: rgb(255,166,77);
+	-fx-font-family: 'Arial';
+	-fx-font-size: 15px
+	}
+	
+#SinglePizzaCost {
+	-fx-underline: true	
+}
+	
+	
+	
